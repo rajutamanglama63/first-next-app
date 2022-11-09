@@ -1,11 +1,19 @@
 import { Children } from "react";
 import LayoutStyles from "../styles/Layout.module.css";
+import Header from "./Header";
+import Nav from "./Nav";
 
 const Layout = ({ children }) => {
   return (
-    <div className={LayoutStyles.container}>
-      <div className={LayoutStyles.main}>{children}</div>
-    </div>
+    <>
+      <Nav />
+      <div className={LayoutStyles.container}>
+        <div className={LayoutStyles.main}>
+          <Header />
+          {children}
+        </div>
+      </div>
+    </>
   );
 };
 
